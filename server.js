@@ -6,7 +6,7 @@ module.exports = api;
 
 api.get('/awesome', function(req) {
   return req.queryString.name + ' is ' + superb();
-}, {apiKeyRequired: true});
+}, {apiKeyRequired: false});
 
 api.get('/sad', function(req) {
   return req.queryString.name + ' wishes they were ' + superb();
