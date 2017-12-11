@@ -4,10 +4,12 @@ var ApiBuilder = require('claudia-api-builder'),
 
 module.exports = api;
 
+var requireApiKey = false;
+
 api.get('/awesome', function(req) {
   return req.queryString.name + ' is ' + superb();
-}, {apiKeyRequired: true});
+}, {apiKeyRequired: requireApiKey});
 
 api.get('/sad', function(req) {
   return req.queryString.name + ' wishes they were ' + superb();
-}, {apiKeyRequired: true});
+}, {apiKeyRequired: requireApiKey});
