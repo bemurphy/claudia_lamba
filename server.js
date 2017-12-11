@@ -4,7 +4,7 @@ var ApiBuilder = require('claudia-api-builder'),
 
 module.exports = api;
 
-var requireApiKey = false;
+var requireApiKey = true;
 
 api.get('/awesome', function(req) {
   return req.queryString.name + ' is ' + superb();
